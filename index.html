@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Winston Tjahaja - Resume</title>
     <style>
-        /* General Styling */
         body {
             font-family: 'Arial', sans-serif;
             background: linear-gradient(120deg, #edf2f7, #e2e8f0);
             margin: 0;
             padding: 0;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
@@ -19,7 +21,6 @@
             padding: 2rem;
             background: #1a202c;
             color: white;
-            animation: fadeIn 2s ease-in;
         }
 
         header h1 {
@@ -42,6 +43,7 @@
             max-width: 900px;
             margin: 2rem auto;
             padding: 0 1rem;
+            flex: 1;
         }
 
         section {
@@ -51,17 +53,6 @@
         h2 {
             font-size: 1.8rem;
             color: #1a202c;
-            position: relative;
-            display: inline-block;
-        }
-
-        h2::after {
-            content: '';
-            width: 60px;
-            height: 3px;
-            background: #63b3ed;
-            display: block;
-            margin-top: 5px;
         }
 
         ul {
@@ -76,14 +67,11 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             position: relative;
-            animation: slideIn 1s ease-in-out;
         }
 
-        li::before {
-            content: '⭐';
-            position: absolute;
-            left: -25px;
-            top: 8px;
+        a {
+            color: #3182ce;
+            text-decoration: none;
         }
 
         footer {
@@ -91,37 +79,20 @@
             padding: 1rem;
             background: #1a202c;
             color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
 
-        .highlight {
-            background: #319795;
-            color: white;
-            padding: 0.2rem 0.5rem;
-            border-radius: 3px;
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1rem;
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
+        .skills img {
+            height: 50px;
+            width: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -137,22 +108,15 @@
 
     <div class="container">
         <section>
-            <h2>Profile</h2>
-            <p>
-                Highly motivated and detail-oriented Computer Engineering student at the <span class="highlight">University of Indonesia</span>. Passionate about innovation, problem-solving, and applying technical skills to make a meaningful impact in the field of computer engineering.
-            </p>
-        </section>
-
-        <section>
             <h2>Professional Experience</h2>
             <ul>
                 <li>
-                    <strong>Network Infrastructure (Engineering Enhancements)</strong> - PT Bank Central Asia Indonesia Tbk. <em>(01/2024 – 07/2024)</em><br>
-                    Developed network monitoring tools using Ansible AWX, Nautobot, and HPE GreenLake Dashboard. Balanced academic and professional commitments effectively.
+                    <strong><a href="https://id.linkedin.com/company/bca" target="_blank">PT Bank Central Asia Indonesia Tbk.</a></strong> 
+                    - Network Infrastructure (Engineering Enhancements)
                 </li>
                 <li>
-                    <strong>Frontend Developer</strong> - PT. Victoria Alife Indonesia <em>(08/2023 – 12/2023)</em><br>
-                    Designed web pages using Flutter Framework (Dart). Collaborated with developers to implement a seamless web app structure.
+                    <strong><a href="https://id.linkedin.com/company/pt-victoria-alife-indonesia" target="_blank">PT. Victoria Alife Indonesia</a></strong> 
+                    - Frontend Developer (Flutter Framework)
                 </li>
             </ul>
         </section>
@@ -160,53 +124,48 @@
         <section>
             <h2>Projects</h2>
             <ul>
-                <li><strong>CalTerra</strong>: A carbon footprint calculator app developed using Flutter and Dart.</li>
-                <li><strong>Research Project</strong>: Tested Maja fruit extract for mosquito larvae extermination.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Organizations</h2>
-            <ul>
-                <li><strong>KMK Engineering Faculty University of Indonesia</strong> <em>(03/2023 – 12/2023)</em>: Managed social media and organizational relations.</li>
-                <li><strong>Saint Peter Canisius Intl. Catholic Parish</strong> <em>(2011 – Present)</em>: Acted as an altar server consistently, even during the pandemic.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Languages</h2>
-            <ul>
-                <li>Indonesian (Native)</li>
-                <li>English (TOEFL IBT: 100/120)</li>
-                <li>Japanese (N5 Level)</li>
+                <li>
+                    <strong><a href="https://github.com/styxnanda/CalTerra" target="_blank">CalTerra</a></strong> 
+                    - Carbon footprint calculation app.
+                </li>
+                <li>
+                    <strong><a href="https://www.youtube.com/watch?%20v=DnlUu0DCSwo&t=6s&ab_channel=KOMPASTV" target="_blank">Research Paper Project</a></strong> 
+                    - Testing of Maja Fruit extract for mosquito larvae extermination.
+                </li>
             </ul>
         </section>
 
         <section>
             <h2>Skills</h2>
-            <ul>
-                <li>Programming: Flutter, Python, C++, YAML</li>
-                <li>Design: Photoshop, Figma, Premiere Pro, Tailwind CSS</li>
-                <li>Networking: Nautobot, Excel (Visual Basic)</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Interests</h2>
-            <ul>
-                <li>Automation: Enthusiastic about automating systems with Python.</li>
-                <li>Sustainability: Interested in methods to promote a greener society.</li>
-                <li>Network Infrastructure: Developing skills to manage and implement infrastructure tools.</li>
-                <li>Machine Learning: Expanding expertise in tools and techniques.</li>
-            </ul>
+            <div class="skills">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png" alt="Flutter Logo" title="Flutter">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" title="Python">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C++ Logo" title="C++">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Photoshop_CS6_icon.png" alt="Photoshop Logo" title="Photoshop">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma Logo" title="Figma">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Tailwind_CSS_Logo.svg" alt="Tailwind CSS Logo" title="Tailwind CSS">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Excel_Logo.svg" alt="Excel Logo" title="Excel">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Adobe_Premiere_Pro_Logo.svg" alt="Premiere Pro Logo" title="Premiere Pro">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/YAML_Logo.svg" alt="YAML Logo" title="YAML">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Greenlake_HPE_logo.png" alt="Nautobot Logo" title="Nautobot">
+            </div>
         </section>
 
         <section>
             <h2>Education</h2>
             <ul>
-                <li><strong>Computer Engineering Undergraduate</strong> - University of Indonesia <em>(Depok, Indonesia)</em></li>
-                <li><strong>Science Course</strong> - Canisius College <em>(Jakarta, Indonesia)</em></li>
-                <li><strong>Middle School Diploma</strong> - Saint Theresia Middle School <em>(Jakarta, Indonesia)</em></li>
+                <li>
+                    <strong><a href="https://id.linkedin.com/school/university-of-indonesia/" target="_blank">Computer Engineering Undergraduate</a></strong> 
+                    - University of Indonesia.
+                </li>
+                <li>
+                    <strong><a href="https://id.linkedin.com/school/kolese-kanisius-canisius-college/" target="_blank">Science Course</a></strong> 
+                    - Canisius College.
+                </li>
+                <li>
+                    <strong><a href="https://www.sttheresia-jkt.sch.id/smp/profile-smp/" target="_blank">Middle School Diploma</a></strong> 
+                    - Saint Theresia Middle School.
+                </li>
             </ul>
         </section>
     </div>
