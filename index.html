@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(120deg, #edf2f7, #e2e8f0);
+            background: linear-gradient(120deg, #e2d8b2, #f7f7f7);
             margin: 0;
             padding: 0;
             color: #333;
@@ -19,8 +19,13 @@
         header {
             text-align: center;
             padding: 2rem;
-            background: #1a202c;
+            background: #8c2807;
             color: white;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+        
         }
 
         header h1 {
@@ -48,6 +53,13 @@
 
         section {
             margin-bottom: 2rem;
+            margin-bottom: 10px 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border: 3px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            
         }
 
         h2 {
@@ -86,6 +98,8 @@
             flex-wrap: wrap;
             gap: 10px;
             margin-top: 1rem;
+            justify-content: center;
+            display: flex;
         }
 
         .skills img {
@@ -94,22 +108,47 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .links img {
+            height: 20px;
+            width: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .fade-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .fade-section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Michael Winston Tjahaja</h1>
         <p>Email: <a href="mailto:perfecttjahaja@gmail.com">perfecttjahaja@gmail.com</a> | Phone: +62 81717112001</p>
-        <p>
-            <a href="https://linkedin.com/in/michaelwinstontjahaja" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/Colossalbyte" target="_blank">GitHub</a>
-        </p>
+        <div class = "links">
+            <a href="https://linkedin.com/in/michaelwinstontjahaja" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO9lOYvVYtruNLntp5K61JoX4mACQZ0BmTqQ&s" alt="LinkedIn Logo" title="LinkedIn" ></img></a>  |  
+            <a href="https://github.com/Collosalbyte" target="_blank">
+            <img src="https://pngimg.com/uploads/github/github_PNG80.png" alt="GitHub Logo" title="GitHub"></img></div></a>
+        </div>
     </header>
     <div class="container">
 
         <section>
-            <h2>Profile</h2>
+            <h1>Profile</h1>
             <p>
                 <img src="https://media.licdn.com/dms/image/v2/D5603AQFlvHgKGA5TKQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1673596346303?e=2147483647&v=beta&t=Mx-MOYtIVnr7EGRqe5J7_9DIdRSlVHQBmzH-vjQxeEk">
             </p>
@@ -119,7 +158,7 @@
         </section>
 
         
-        <section>
+        <section class="fade-section" data-fade>
             <h2>Professional Experience</h2>
             <ul>
                 <li>
@@ -140,7 +179,7 @@
             </ul>
         </section>
 
-        <section>
+        <section class="fade-section" data-fade>
             <h2>Organizations</h2>
             <ul>
                 <li><strong>KMK Engineering Faculty University of Indonesia</strong> <em>(03/2023 – 12/2023)</em>: Managed social media and organizational relations.</li>
@@ -148,7 +187,7 @@
             </ul>
         </section>
 
-        <section>
+        <section class="fade-section" data-fade>
             <h2>Projects</h2>
             <ul>
                 <li>
@@ -162,7 +201,7 @@
             </ul>
         </section>
 
-        <section>
+        <section class="fade-section" data-fade>
             <h2>Activities</h2>
             <ul>
                 <li><strong>CCD Teacher</strong> <em>(09/2024 - Present)</em>: Teaching classes for First Communion at Saint Peter Canisius for childrens age 7-9.</li>
@@ -170,7 +209,7 @@
             </ul>
         </section>
 
-        <section>
+        <section class="fade-section" data-fade>
             <h2>Interests</h2>
             <ul>
                 <li>Automation: Enthusiastic about automating systems with Python.</li>
@@ -180,7 +219,7 @@
             </ul>
         </section>
 
-        <section>
+        <section class="fade-section" data-fade>
             <h2>Education</h2>
             <ul>
                 <li>
@@ -198,18 +237,18 @@
             </ul>
         </section>
 
-        <section>
+        <section class="fade-section" data-fade>
             <h2>Skills</h2>
             <div class="skills">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png" alt="Flutter Logo" title="Flutter">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" title="Python">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C++ Logo" title="C++">
+                <img src="https://logos-download.com/wp-content/uploads/2017/07/HTML5_logo-700x700.png" alt="HTML Logo" title="HTML">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png" alt="Flutter Logo" title="Flutter">
                 <img src="https://i.imgur.com/Knq4DSW.png" alt="Photoshop Logo" title="Photoshop">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/768px-Adobe_Premiere_Pro_CC_icon.svg.png" alt="Premiere Pro Logo" title="Premiere Pro">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma Logo" title="Figma">
                 <img src="https://i.imgur.com/c0oSADu.png" alt="Tailwind CSS Logo" title="Tailwind CSS">
                 <img src="https://i.imgur.com/DKqYmfP.png" alt="Excel Logo" title="Excel">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/768px-Adobe_Premiere_Pro_CC_icon.svg.png" alt="Premiere Pro Logo" title="Premiere Pro">
-                <img src="https://avatars.githubusercontent.com/u/75628359?s=200&v=4" alt="Nautobot Logo" title="Nautobot">
 
             </div>
         </section>
@@ -219,5 +258,23 @@
     <footer>
         &copy; 2024 Michael Winston Tjahaja. Built with a 💻 and some ☕ (this is tea not coffee. I don't drink coffee).
     </footer>
+
+    <script>
+        document.addEventListener('scroll', () => {
+    const fadeSections = document.querySelectorAll('.fade-section[data-fade]');
+    fadeSections.forEach(section => {
+        // Check if already animated
+        if (section.classList.contains('fade-complete')) return;
+
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            section.style.opacity = 1;
+            section.style.transform = 'translateY(0)';
+            section.classList.add('fade-complete'); // Mark as animated
+        }
+    });
+});
+    </script>
+
 </body>
 </html>
