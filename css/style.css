@@ -17,12 +17,14 @@ header {
     align-items: center;
     justify-content: center;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
 }
 
 header h1 {
-    font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    justify-content: center;
+    text-align: center;
+    display: flex;
 }
 
 header p {
@@ -49,6 +51,7 @@ section {
     background-color: #fcf7ee;
     border-radius: 5px;
     text-align: center;
+    font-size: 1rem;
 }
 
 h2 {
